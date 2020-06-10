@@ -1,17 +1,18 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
+import { render } from 'react-dom';
 import App from './App';
-import * as serviceWorker from './serviceWorker';
 
-ReactDOM.render(
+const DATA = [
+  { id: "todo-0", name: "Learn React", completed: false },
+  { id: "todo-1", name: "Gym", completed: false },
+  { id: "todo-2", name: "Sleep", completed: false }
+];
+
+render(
   <React.StrictMode>
-    <App />
+    <App tasks={DATA} />
   </React.StrictMode>,
   document.getElementById('root')
 );
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+// NPM INSTALL REACT-ICONS
